@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -11,11 +13,24 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Inter', sans-serif;
+}
+
+
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 18.15px;
 }
 
 /* -------------------------------------------
@@ -27,135 +42,309 @@ time, mark, audio, video {
 
 
 html, body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #fff;
-    background-color: black;
-    padding: 3%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: black;
+  padding: 3%;
 }
 
 .wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 
-    h1 {
-        align-self: start;
-    }
+  h1 {
+    align-self: start;
+    font-size: 20px;
+  }
 }
+
 nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  background: black;
+  height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
+
 nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 10px;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .component {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 282px;
 }
 
-.card_festival {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 200px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: start;
-    align-items: flex-end;
+.destaque {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 55%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+
+  .card_festival_info {
+    border-right: 5px dashed #fd9801;
+    justify-content: center;
+  }
 }
 
+#acontecer {
+  text-align: center;
+  background: #fd9801;
+  color: white;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  padding: 2px 8px;
+}
 
+.card_festival_info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  gap: 2%;
+  margin-left: 9%;
+  height: 100%;
 
-.card_festival_info{
+  h1 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.2px;
+  }
+
+  .data {
+    color: #fd9801;
+    font-size: 0.9rem;
+  }
+
+  .localizacao {
+    color: #e5e5e5;
+    font-size: 0.9rem;
+  }
+
+  .preço {
+    margin-top: 2%;
+    background: black;
+    border-radius: 10px;
     width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 20px;
-
-    h1 {
-        font-size: 1.7rem;
-        font-weight: 700;
-    }
-
-    .data {
-        color: #fd9801;
-    }
-
-    .localizacao {
-        color: #e5e5e5;
-        margin-bottom: 10px;
-    }
-
-    .preço {
-        background: black;
-        border-radius: 10px;
-        width: fit-content;
-        padding: 6px 11px;
-
-    }
+    padding: 6px 11px;
+    margin-bottom: 7%;
+  }
 }
+
 
 .fav_icon {
-    position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000000;
+  z-index: 998;
+}
+
+.pill {
+  position: relative;
+  background: #323232;
+  width: 100%;
+  height: 46px;
+  border-radius: 22px;
+
+  .venda_wrapper {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .left {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .right {
+      width: 15%;
+      height: 60%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    p {
+      text-align: start;
+      width: 60%;
+      color: #e5e5e5;
+    }
+
+    #preco {
+      width: 15%;
+    }
+  }
+
+  input {
+    border: none;
+    background-color: #323232;
+    color: #e5e5e5;
+    width: 80%;
+    font-size: 1rem;
+  }
+}
+
+
+.card_festival {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 314px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+
+  .fav_icon {
+    position: absolute;
     bottom: 15px;
     right: 15px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: #000000;
-    z-index: 9999;
+  }
 }
 
-.venda_final {
-    background: #323232;
-    width: 97%;
-    height: 45px;
-    border-radius: 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
+.cards_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.list {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(50, 50, 50));
+  border: 1px solid red;
+
+  .card_festival_info {
+    justify-content: center;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  &.fest {
+    border-radius: 20px;
+
+    & .img_icon {
+      border-radius: 20px 0 0 20px;
+    }
+  }
+
+  &.artist {
+    border-radius: 45px;
+  }
+
+  & .img_icon {
+    width: 90px;
+    height: 90px;
 
     img {
-        width: 10%;
-        height: 60%;
-        margin-left: 0px;
+      width: 90px;
+      height: 90px;
     }
-
-    p{
-        text-align: start;
-        width: 60%;
-        color: #e5e5e5;
-    }
-
+  }
 
 }
 
 
-#brunch_electronik {
-    background-image:
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgb(30, 30, 30)),
-            url("../images/brunch.jpg");
+.last {
+  margin-bottom: 50px;
+}
 
+.brunch_electronik_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)),
+  url("../images/brunch.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.brunch_electronik {
+  background-image: url("../images/brunch.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.somnii_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)),
+  url("../images/somnii_23.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.somnii {
+  background-image: url("../images/somnii_23.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.tomorrowland_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)),
+  url("../images/tomorrowland.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.tomorrowland {
+  background-image: url("../images/tomorrowland.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sonar_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)),
+  url("../images/sonar_24.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sonar {
+  background-image: url("../images/sonar_24.jpg");
+  background-size: cover;
+  background-position: center;
 }

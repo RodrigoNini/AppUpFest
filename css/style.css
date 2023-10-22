@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,6 +18,18 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 18.15px;
 }
 
 /* -------------------------------------------
@@ -27,7 +40,6 @@ time, mark, audio, video {
 */
 html, body {
   margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
@@ -46,20 +58,25 @@ html, body {
 }
 .wrapper h1 {
   align-self: start;
+  font-size: 20px;
 }
 
 nav {
+  background: black;
+  height: 60px;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
 }
 
 nav ul {
+  height: 100%;
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 10px;
+  align-items: center;
 }
 
 .component {
@@ -67,6 +84,120 @@ nav ul {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  height: 282px;
+}
+
+.destaque {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 55%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+}
+.destaque .card_festival_info {
+  border-right: 5px dashed #fd9801;
+  justify-content: center;
+}
+
+#acontecer {
+  text-align: center;
+  background: #fd9801;
+  color: white;
+  margin-bottom: 3%;
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.card_festival_info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  gap: 2%;
+  margin-left: 9%;
+  height: 100%;
+}
+.card_festival_info h1 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.2px;
+}
+.card_festival_info .data {
+  color: #fd9801;
+  font-size: 0.9rem;
+}
+.card_festival_info .localizacao {
+  color: #e5e5e5;
+  font-size: 0.9rem;
+}
+.card_festival_info .preço {
+  margin-top: 2%;
+  background: black;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 6px 11px;
+  margin-bottom: 7%;
+}
+
+.fav_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000000;
+  z-index: 998;
+}
+
+.pill {
+  position: relative;
+  background: #323232;
+  width: 100%;
+  height: 46px;
+  border-radius: 22px;
+}
+.pill .venda_wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.pill .venda_wrapper .left {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pill .venda_wrapper .right {
+  width: 15%;
+  height: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pill .venda_wrapper p {
+  text-align: start;
+  width: 60%;
+  color: #e5e5e5;
+}
+.pill .venda_wrapper #preco {
+  width: 15%;
+}
+.pill input {
+  border: none;
+  background-color: #323232;
+  color: #e5e5e5;
+  width: 80%;
+  font-size: 1rem;
 }
 
 .card_festival {
@@ -74,75 +205,114 @@ nav ul {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 200px;
+  height: 314px;
   border-radius: 25px;
   display: flex;
   justify-content: start;
   align-items: flex-end;
 }
+.card_festival .fav_icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
 
-.card_festival_info {
-  width: fit-content;
+.cards_wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 20px;
-}
-.card_festival_info h1 {
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-.card_festival_info .data {
-  color: #fd9801;
-}
-.card_festival_info .localizacao {
-  color: #e5e5e5;
-  margin-bottom: 10px;
-}
-.card_festival_info .preço {
-  background: black;
-  border-radius: 10px;
-  width: fit-content;
-  padding: 6px 11px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.fav_icon {
-  position: absolute;
+.list {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 15px;
-  right: 15px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #000000;
-  z-index: 9999;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(50, 50, 50));
+  border: 1px solid red;
+}
+.list .card_festival_info {
+  justify-content: center;
+}
+.list .card_festival_info h1 {
+  font-size: 18px;
+}
+.list .card_festival_info p {
+  font-size: 13px;
+}
+.list.fest {
+  border-radius: 20px;
+}
+.list.fest .img_icon {
+  border-radius: 20px 0 0 20px;
+}
+.list.artist {
+  border-radius: 45px;
+}
+.list .img_icon {
+  width: 90px;
+  height: 90px;
+}
+.list .img_icon img {
+  width: 90px;
+  height: 90px;
 }
 
-.venda_final {
-  background: #323232;
-  width: 97%;
-  height: 45px;
-  border-radius: 40px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.venda_final img {
-  width: 10%;
-  height: 60%;
-  margin-left: 0px;
-}
-.venda_final p {
-  text-align: start;
-  width: 60%;
-  color: #e5e5e5;
+.last {
+  margin-bottom: 50px;
 }
 
-#brunch_electronik {
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgb(30, 30, 30)), url("../images/brunch.jpg");
+.brunch_electronik_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)), url("../images/brunch.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.brunch_electronik {
+  background-image: url("../images/brunch.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.somnii_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)), url("../images/somnii_23.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.somnii {
+  background-image: url("../images/somnii_23.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.tomorrowland_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)), url("../images/tomorrowland.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.tomorrowland {
+  background-image: url("../images/tomorrowland.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sonar_fade {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(50, 50, 50)), url("../images/sonar_24.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sonar {
+  background-image: url("../images/sonar_24.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */

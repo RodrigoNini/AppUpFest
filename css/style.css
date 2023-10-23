@@ -85,6 +85,7 @@ nav ul {
   flex-direction: column;
   gap: 14px;
   height: 282px;
+  margin-bottom: 10px;
 }
 
 .destaque {
@@ -142,6 +143,17 @@ nav ul {
   width: fit-content;
   padding: 6px 11px;
   margin-bottom: 7%;
+}
+
+.preço {
+  background: black;
+  border-radius: 10px;
+  width: 68px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
 }
 
 .fav_icon {
@@ -229,15 +241,15 @@ nav ul {
 .list {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 90px;
   background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(50, 50, 50));
-  border: 1px solid red;
 }
 .list .card_festival_info {
   justify-content: center;
+  margin-left: 14px;
+  width: 60%;
 }
 .list .card_festival_info h1 {
   font-size: 18px;
@@ -251,20 +263,71 @@ nav ul {
 .list.fest .img_icon {
   border-radius: 20px 0 0 20px;
 }
-.list.artist {
+.list.pill {
+  border-radius: 45px;
+}
+.list.pill .img_icon {
   border-radius: 45px;
 }
 .list .img_icon {
   width: 90px;
   height: 90px;
 }
-.list .img_icon img {
-  width: 90px;
-  height: 90px;
+.list .fav_icon {
+  position: absolute;
+  right: 15px;
 }
 
-.last {
-  margin-bottom: 50px;
+.festival {
+  border-bottom: 1px solid #A0A0A0;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.festival > .card_festival_info {
+  justify-content: start;
+  height: fit-content;
+  align-items: start;
+  margin-left: 0;
+}
+
+.bilhete {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(50, 50, 50));
+  border-radius: 45px;
+}
+.bilhete.inactive {
+  color: #A0A0A0;
+}
+.bilhete .img_icon {
+  border-radius: 45px;
+  background: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bilhete .img_icon img {
+  width: 40px;
+  height: 40px;
+}
+.bilhete .preço {
+  position: absolute;
+  right: 30px;
+}
+
+.last-s {
+  margin-bottom: 20px;
+}
+
+.last-m {
+  margin-bottom: 100px;
+}
+
+.last-l {
+  margin-bottom: 150px;
 }
 
 .brunch_electronik_fade {
@@ -285,8 +348,14 @@ nav ul {
   background-position: center;
 }
 
-.somnii {
+.somnii_23 {
   background-image: url("../images/somnii_23.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.somnii_24 {
+  background-image: url("../images/somnii_24.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -311,6 +380,54 @@ nav ul {
 
 .sonar {
   background-image: url("../images/sonar_24.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.amelie {
+  background-image: url("../images/amelie.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.artbat {
+  background-image: url("../images/artbat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.timmy {
+  background-image: url("../images/timmy.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.nto {
+  background-image: url("../images/nto.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.oliver {
+  background-image: url("../images/oliver.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.blaster {
+  background-image: url("../images/blasterjaxx.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.ticket_active {
+  background-image: url("../icons/nav_ticket_active.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.ticket_inactive {
+  background-image: url("../icons/nav_ticket.svg");
   background-size: cover;
   background-position: center;
 }

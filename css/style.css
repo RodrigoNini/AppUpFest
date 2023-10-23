@@ -28,8 +28,10 @@ h1 {
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 18.15px;
+  color: #E6E6E6;
 }
 
 /* -------------------------------------------
@@ -316,6 +318,74 @@ nav ul {
 .bilhete .preço {
   position: absolute;
   right: 30px;
+}
+
+.confirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  background: #181818;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 5%;
+  z-index: 99999;
+}
+.confirmation h1 {
+  align-self: start;
+}
+.confirmation .list {
+  height: 70px;
+  width: 100%;
+}
+.confirmation .list .img_icon {
+  width: 70px;
+  height: 70px;
+}
+.confirmation .pill {
+  height: 46px;
+}
+.confirmation table {
+  width: 80%;
+  font-size: 13px;
+  column-gap: 50px;
+}
+.confirmation .venda_wrapper {
+  justify-content: start;
+  gap: 25px;
+  margin-left: 15px;
+}
+.confirmation .venda_wrapper img {
+  width: 24px;
+}
+.confirmation button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: #323232;
+  color: #E6E6E6;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.confirmation button img {
+  width: 20px;
+}
+.confirmation .inline {
+  display: flex;
+  width: 100%;
+  gap: 9px;
 }
 
 .last-s {

@@ -9,6 +9,44 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="confirmation">
+    <h1>Confirmação</h1>
+    <div class="list bilhete">
+        <div class="img_icon">
+            <img src="icons/nav_ticket_active.svg">
+        </div>
+        <div class="card_festival_info">
+            <h1>Early Bird</h1>
+            <p class="data">Até 30 de abril</p>
+        </div>
+        <p class="preço">43,00 €</p>
+    </div>
+    <p>Estás a comprar um bilhete para o festival RFM Somnii 2024. Verifica os teus dados e clica em “Confirmar” para gerar uma referência de pagamento.</p>
+    <table>
+        <tbody>
+        <tr>
+            <th>Nome</th>
+            <td id="nome">Rodrigo Alves</td>
+        </tr>
+        <tr>
+            <th>E-mail</th>
+            <td id="email">rodrigoninialves@gmail.com</td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="inline">
+        <div class="pill">
+            <div class="venda_wrapper" id="confirmar">
+                <img src="icons/check.svg">
+                <button type="submit" >Confirmar</button>
+            </div>
+        </div>
+        <button id="close">
+            <img src="icons/x.svg" alt="Sair">
+        </button>
+    </div>
+
+</div>
 <nav>
     <ul>
         <li>
@@ -120,4 +158,5 @@
     </div>
 </div>
 </body>
+<script src="app.js"></script>
 </html>

@@ -67,6 +67,10 @@ html, body {
   }
 }
 
+
+//NavBar
+
+
 nav {
   background: black;
   height: 60px;
@@ -84,6 +88,8 @@ nav ul {
   justify-content: space-evenly;
   align-items: center;
 }
+
+//gerais
 
 .component {
   width: 100%;
@@ -169,6 +175,7 @@ nav ul {
 
 
 .fav_icon {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,6 +184,17 @@ nav ul {
   border-radius: 50%;
   background: #000000;
   z-index: 998;
+
+    .open {
+      visibility: visible;
+    }
+    .full {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
 }
 
 .pill {
@@ -416,25 +434,7 @@ nav ul {
     }
   }
 
-  button {
-    border: none;
-    margin: 0;
-    padding: 0;
-    background: #323232;
-    color: #E6E6E6;
-    border-radius: 50%;
-    width: 46px;
-    height: 46px;
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    img{
-      width: 20px;
-    }
-  }
 
   .inline{
     display:flex;
@@ -444,7 +444,25 @@ nav ul {
 
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: #323232;
+  color: #E6E6E6;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  img{
+    width: 20px;
+  }
+}
 
 
 //geral

@@ -35,13 +35,13 @@
         </tbody>
     </table>
     <div class="inline">
-        <div class="pill">
+        <div class="pill close">
             <div class="venda_wrapper" id="confirmar">
                 <img src="icons/check.svg">
                 <button type="submit" >Confirmar</button>
             </div>
         </div>
-        <button id="close">
+        <button class="close">
             <img src="icons/x.svg" alt="Sair">
         </button>
     </div>
@@ -53,10 +53,10 @@
             <a href="home.html"><img src="icons/nav_home.svg"/></a>
         </li>
         <li>
-            <a href="home.html"><img src="icons/nav_search_active.svg"/></a>
+            <a href="pesquisa.html"><img src="icons/nav_search.svg"/></a>
         </li>
         <li>
-            <a href="home.html"><img src="icons/nav_ticket.svg"/></a>
+            <a href="festival.html"><img src="icons/nav_ticket_active.svg"/></a>
         </li>
         <li>
             <a href="home.html"><img src="icons/nav_user.svg"/></a>
@@ -67,8 +67,9 @@
 
     <div class="component festival">
         <div class="card_festival somnii_23">
-            <div class="fav_icon">
-                <img src="icons/heart_open.svg">
+            <div class="fav_icon" id="somnii">
+                <img class="open" src="icons/heart_open.svg">
+                <img class="full" src="icons/heart_full.svg">
             </div>
         </div>
         <div class="card_festival_info">
@@ -88,8 +89,9 @@
                 <p class="data">Sábado, 21h00</p>
                 <p class="localizacao">Palco Principal</p>
             </div>
-            <div class="fav_icon">
-                <img src="icons/heart_open.svg">
+            <div class="fav_icon" id="concerto1">
+                <img class="open" src="icons/heart_open.svg">
+                <img class="full" src="icons/heart_full.svg">
             </div>
         </div>
         <div class="list pill">
@@ -99,8 +101,9 @@
                 <p class="data">Sábado, 23h30</p>
                 <p class="localizacao">Palco Principal</p>
             </div>
-            <div class="fav_icon">
-                <img src="icons/heart_open.svg">
+            <div class="fav_icon" id="concerto2">
+                <img class="open" src="icons/heart_open.svg">
+                <img class="full" src="icons/heart_full.svg">
             </div>
         </div>
         <div class="list pill">
@@ -110,9 +113,12 @@
                 <p class="data">Domingo, 18h00</p>
                 <p class="localizacao">Palco Principal</p>
             </div>
-            <div class="fav_icon">
-                <img src="icons/heart_open.svg">
+            <div class="fav_icon" id="concerto3">
+                <img class="open" src="icons/heart_open.svg">
+                <img class="full" src="icons/heart_full.svg">
             </div>
+
+
         </div>
     </div>
 
@@ -135,7 +141,7 @@
             </div>
             <p class="preço">25,00 €</p>
         </div>
-        <div class="list bilhete">
+        <div class="list bilhete disponivel">
             <div class="img_icon">
                 <img src="icons/nav_ticket_active.svg">
             </div>
@@ -145,7 +151,7 @@
             </div>
             <p class="preço">35,00 €</p>
         </div>
-        <div class="list bilhete">
+        <div class="list bilhete disponivel">
             <div class="img_icon">
                 <img src="icons/nav_ticket_active.svg">
             </div>

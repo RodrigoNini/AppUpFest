@@ -159,6 +159,7 @@ nav ul {
 }
 
 .fav_icon {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,6 +168,16 @@ nav ul {
   border-radius: 50%;
   background: #000000;
   z-index: 998;
+}
+.fav_icon .open {
+  visibility: visible;
+}
+.fav_icon .full {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
 }
 
 .pill {
@@ -364,7 +375,13 @@ nav ul {
 .confirmation .venda_wrapper img {
   width: 24px;
 }
-.confirmation button {
+.confirmation .inline {
+  display: flex;
+  width: 100%;
+  gap: 9px;
+}
+
+button {
   border: none;
   margin: 0;
   padding: 0;
@@ -379,13 +396,8 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
-.confirmation button img {
+button img {
   width: 20px;
-}
-.confirmation .inline {
-  display: flex;
-  width: 100%;
-  gap: 9px;
 }
 
 .last-s {

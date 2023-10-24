@@ -1,7 +1,7 @@
-const purchase = document.querySelectorAll('.bilhete');
+const purchase = document.querySelectorAll('.disponivel');
 const confirmation = document.querySelector('.confirmation');
 const page = document.querySelector('.wrapper');
-const closeButton = document.getElementById('close');
+const closeButton = document.querySelectorAll('.close');
 
 purchase.forEach(function(divElement) {
     divElement.addEventListener('click', function() {
@@ -14,38 +14,44 @@ purchase.forEach(function(divElement) {
     });
 })});
 
-closeButton.addEventListener('click', function() {
-    // Revert the blur and hide the confirmation element
-    page.style.filter = 'blur(0px)';
-    confirmation.style.visibility = 'hidden'; // Hide the element
-});
-
-
-
-
-
-
-
-
-
-
-
-// Initialize an empty list to store the IDs
-const favorites = [];
-
-// Get all elements with the class ".fav_icon"
-const favIcons = document.querySelectorAll('.fav_icon');
-
-// Add a click event listener to each element
-favIcons.forEach(function(iconElement) {
-    iconElement.addEventListener('click', function() {
-        // Get the ID of the clicked element
-        const clickedID = iconElement.id;
-
-        // Store the ID in the list
-        favorites.push(clickedID);
-
-        // You can do something with the stored IDs or display them
-        console.log(`Clicked IDs: ${favorites}`);
+closeButton.forEach(function(button) {
+    button.addEventListener('click', function() {
+        button.addEventListener('click', function() {
+            page.style.filter = 'blur(0px)';
+            confirmation.style.visibility = 'hidden';
+        });
     });
 });
+
+
+
+// favoritos
+const favoriteList = [];
+
+const favoriteButtons = document.querySelectorAll(".fav_icon");
+
+favoriteButtons.forEach((favoriteButton) => {
+
+    const openHeart = favoriteButton.querySelector(".open");
+    const fullHeart = favoriteButton.querySelector(".full");
+
+    favoriteButton.addEventListener("click", function () {
+        if (openHeart.style.visibility === "visible") {
+            openHeart.style.visibility = "hidden";
+            fullHeart.style.visibility = "visible";
+            // Add the ID to the favorite list
+            favoriteList.push(favoriteButton.id);
+            console.log(favoriteList);
+        } else {
+            openHeart.style.visibility = "visible";
+            fullHeart.style.visibility = "hidden";
+            const index = favoriteList.indexOf(favoriteButton.id);
+            if (index > -1) {
+                favoriteList.splice(index, 1)
+                console.log(favoriteList);
+            }
+        }
+    });
+});
+
+

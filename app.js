@@ -26,32 +26,46 @@ closeButton.forEach(function(button) {
 
 
 // favoritos
-const favoriteList = [];
-
 const favoriteButtons = document.querySelectorAll(".fav_icon");
+const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
 
 favoriteButtons.forEach((favoriteButton) => {
-
-    const openHeart = favoriteButton.querySelector(".open");
-    const fullHeart = favoriteButton.querySelector(".full");
+    const elementID = favoriteButton.id;
+    if (savedFavorites.includes(elementID)) {
+        // If the element is in the savedFavorites array, show the full heart
+        favoriteButton.querySelector(".open").style.visibility = "hidden";
+        favoriteButton.querySelector(".full").style.visibility = "visible";
+    }
 
     favoriteButton.addEventListener("click", function () {
-        if (openHeart.style.visibility === "visible") {
-            openHeart.style.visibility = "hidden";
-            fullHeart.style.visibility = "visible";
-            // Add the ID to the favorite list
-            favoriteList.push(favoriteButton.id);
-            console.log(favoriteList);
+        if (savedFavorites.includes(elementID)) {
+            const index = savedFavorites.indexOf(elementID);
+            if (index > -1) {
+                savedFavorites.splice(index, 1);
+            }
         } else {
+            savedFavorites.push(elementID);
+        }
+
+        const openHeart = favoriteButton.querySelector(".open");
+        const fullHeart = favoriteButton.querySelector(".full");
+
+        if (openHeart.style.visibility === "hidden") {
             openHeart.style.visibility = "visible";
             fullHeart.style.visibility = "hidden";
-            const index = favoriteList.indexOf(favoriteButton.id);
-            if (index > -1) {
-                favoriteList.splice(index, 1)
-                console.log(favoriteList);
-            }
+        } else {
+            openHeart.style.visibility = "hidden";
+            fullHeart.style.visibility = "visible";
         }
+
+        // Save the updated favorites in localStorage
+        localStorage.setItem("favorites", JSON.stringify(savedFavorites));
+        console.log(savedFavorites);
     });
 });
+
+
+
 
 
